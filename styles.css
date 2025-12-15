@@ -68,6 +68,35 @@ body {
   }
 }
 
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes beam-scan {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120px);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
 .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -387,7 +416,170 @@ body {
 .section {
   max-width: 1200px;
   margin: 64px auto 0;
-  padding: 0 4px;
+  padding: 44px 36px;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(6, 10, 25, 0.85);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--orbit {
+  background: radial-gradient(circle at 15% 30%, rgba(255, 138, 102, 0.25), rgba(5, 8, 20, 0.94));
+}
+
+.section--orbit::before {
+  width: 420px;
+  height: 420px;
+  left: -80px;
+  top: -110px;
+  background: radial-gradient(circle, rgba(255, 158, 118, 0.45), transparent 60%);
+  filter: blur(8px);
+  opacity: 0.9;
+}
+
+.section--orbit::after {
+  width: 520px;
+  height: 520px;
+  right: -140px;
+  bottom: -240px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 203, 145, 0.35);
+  opacity: 0.5;
+  animation: slow-spin 30s linear infinite;
+}
+
+.section--orbit .card {
+  border-color: rgba(255, 203, 145, 0.4);
+  box-shadow: 0 25px 60px rgba(255, 138, 102, 0.18);
+}
+
+.section--beam {
+  background: linear-gradient(135deg, rgba(67, 133, 255, 0.14), rgba(6, 10, 25, 0.92));
+}
+
+.section--beam::before {
+  inset: 0;
+  background: linear-gradient(115deg, rgba(92, 242, 214, 0.06), transparent 55%);
+}
+
+.section--beam::after {
+  width: 140%;
+  height: 140%;
+  left: -20%;
+  top: -20%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 60px
+  );
+  mix-blend-mode: screen;
+  opacity: 0.2;
+  animation: beam-scan 12s linear infinite;
+}
+
+.section--beam .card {
+  border-color: rgba(92, 242, 214, 0.35);
+  box-shadow: 0 30px 80px rgba(92, 242, 214, 0.12);
+}
+
+.section--beam .strip.alt {
+  border-color: rgba(92, 242, 214, 0.5);
+  box-shadow: 0 10px 30px rgba(92, 242, 214, 0.25);
+}
+
+.section--capsule {
+  background: linear-gradient(135deg, rgba(242, 201, 76, 0.08), rgba(6, 11, 26, 0.92));
+}
+
+.section--capsule::before {
+  width: 180px;
+  height: 520px;
+  right: 20px;
+  top: -80px;
+  border-radius: 120px;
+  background: linear-gradient(180deg, rgba(92, 242, 214, 0.2), rgba(242, 201, 76, 0.08));
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
+.section--capsule::after {
+  width: 320px;
+  height: 320px;
+  left: -160px;
+  bottom: -120px;
+  border-radius: 30% 70% 60% 40%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.05), transparent 65%);
+}
+
+.section--capsule .card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.section--capsule .card:last-child {
+  background: rgba(92, 242, 214, 0.08);
+  border-color: rgba(92, 242, 214, 0.3);
+}
+
+.section--pulse {
+  background: linear-gradient(140deg, rgba(92, 242, 214, 0.08), rgba(255, 122, 122, 0.08), rgba(6, 10, 25, 0.9));
+}
+
+.section--pulse::before {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(92, 242, 214, 0.22), transparent 65%);
+  animation: pulse 8s ease-in-out infinite alternate;
+  opacity: 0.9;
+}
+
+.section--pulse::after {
+  inset: 20px;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  opacity: 0.5;
+}
+
+.section--pulse .card {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(255, 122, 122, 0.1);
+}
+
+.section--pulse .bullet-list {
+  gap: 12px;
+}
+
+.section--pulse .bullet-list li {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  padding: 10px 18px 10px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section--pulse .bullet-list li::before {
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .section-header {
@@ -531,6 +723,19 @@ body {
   border: 1px dashed var(--border);
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
+}
+
+.strip.cta-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.strip.cta-strip p {
+  margin: 0;
+  flex: 1 1 240px;
 }
 
 .strip.alt {
