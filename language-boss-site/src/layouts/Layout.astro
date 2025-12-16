@@ -24,38 +24,269 @@ const { title, description = "Language Boss - The English learning OS built for 
   <body>
     <slot />
     <script>
-      // Scroll reveal animation
-      const revealElements = document.querySelectorAll('.reveal');
-      
-      // Hide elements that will be revealed
-      revealElements.forEach(el => el.classList.add('hidden'));
-      
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -30px 0px'
+      const translations = {
+        en: {
+          "brand-tagline": "English OS for Schools",
+          "nav-problem": "Problem",
+          "nav-why": "Why Us",
+          "nav-about": "About",
+          "nav-demo": "Book a Demo",
+          "hero-eyebrow": "Run your school on one system",
+          "hero-title":
+            "Not another app. A complete operating system for your English program.",
+          "hero-lede-1":
+            "Parents don’t want promises. They want progress they can see.",
+          "hero-lede-2":
+            "Stronger engagement + clear progress = higher retention and revenue.",
+          "hero-cta-primary": "Book a Demo",
+          "hero-cta-secondary": "Learn More",
+          "hero-badge":
+            "Built by native English educators who understand Taiwan—bilingual, local-first, outcomes-first.",
+          "card-header": "Progress you can prove",
+          "stat-1-label": "Grammar accuracy lift",
+          "stat-1-value": "+12%",
+          "stat-1-sub": "in two weeks",
+          "stat-2-label": "Speaking confidence",
+          "stat-2-value": "2.3x",
+          "stat-2-sub": "after AI drills",
+          "stat-3-label": "Grading time saved",
+          "stat-3-value": "-65%",
+          "stat-3-sub": "auto-scoring",
+          "step-1-title": "Import textbooks or PDFs",
+          "step-1-desc":
+            "AI reads vocab, grammar, and themes to build a class knowledge graph.",
+          "step-2-title": "Generate practice & speech scripts",
+          "step-2-desc":
+            "Dialogue, fill-ins, corrections, synonyms, short writing—all auto-generated.",
+          "step-3-title": "Teachers refine and launch",
+          "step-3-desc":
+            "Core homework plus personal boosters, with US/UK accent detection.",
+          "prob-eyebrow": "The Problem",
+          "prob-title":
+            "Schools don’t need another app—they need a system that works.",
+          "prob-list-title": "The system must:",
+          "prob-1": "Make teaching smoother, not more complicated",
+          "prob-2": "Turn homework into insight, not busywork",
+          "prob-3": "Keep quality consistent across classes and campuses",
+          "prob-4": "Prove progress to parents and stakeholders",
+          "promise-eyebrow": "The Promise",
+          "promise-title":
+            "Teach better. Operate smarter. Grow with confidence.",
+          "promise-body":
+            "Language Boss helps schools increase teaching effectiveness, strengthen retention, and improve unit economics—without burning out teachers.",
+          "why-eyebrow": "Why Language Boss",
+          "why-title":
+            "Most tools are add-ons. Language Boss is infrastructure.",
+          "why-lede":
+            "When learning, feedback, and reporting are split across tools, time is lost and momentum fades. Language Boss unifies classes, practice, scores, and insight in one system built for real classrooms.",
+          "diff-title": "Differentiators",
+          "diff-1": "Built for school operations—not consumer habits",
+          "diff-2": "Designed for premium delivery—not generic content",
+          "diff-3": "Aligned to teaching—not random “AI chat”",
+          "diff-4": "Made for Taiwan schools—real workflows, real expectations",
+          "control-title": "AI that supports your teachers—not replaces them.",
+          "control-body":
+            "Teachers stay in charge of materials, assignments, and pacing. AI handles the heavy lifting to keep quality consistent.",
+          "control-strip": "See Language Boss live",
+          "feature-1-title": "Unified workflow",
+          "feature-1-body":
+            "Lesson → practice → feedback without app-switching or chasing spreadsheets.",
+          "feature-2-title": "Personalized at scale",
+          "feature-2-body":
+            "Maintain class rhythm while AI sets the right challenge per student.",
+          "feature-3-title": "Voice-first learning",
+          "feature-3-body":
+            "Speaking practice with context, modeling, and US/UK checks—no awkward drills.",
+          "feature-4-title": "Clear reporting",
+          "feature-4-body":
+            "Track progress by class, level, and skill area; adjust strategy instantly.",
+          "about-eyebrow": "About",
+          "about-title":
+            "We’re building the modern standard for English education.",
+          "about-body":
+            "Language Boss helps great schools deliver great outcomes—consistently, measurably, and sustainably.",
+          "beliefs-title": "We Believe",
+          "belief-1": "Teachers should spend time teaching, not doing admin.",
+          "belief-2":
+            "Students improve faster when practice is structured and personalized.",
+          "belief-3":
+            "Schools grow when quality is consistent and progress is visible.",
+          "team-tagline": "Native English educators who understand Taiwan",
+          "team-desc": "Bilingual • Local-first • Outcomes-first",
+          "about-cta-primary": "Meet the Team",
+          "about-cta-secondary": "Talk to Us",
+          "contact-eyebrow": "Demo",
+          "contact-title": "Want to see Language Boss in your school?",
+          "contact-body": "In 30 minutes we'll map it to your program structure.",
+          "contact-headline-1": "See Language Boss in action",
+          "contact-headline-2": "Build your school’s next system",
+          "contact-headline-3": "Ready to modernize your English program?",
+          "contact-form-title": "Tell us about your school",
+          "contact-q1": "Number of campuses/classes",
+          "contact-q2": "Age range and levels",
+          "contact-q3":
+            "Primary goal (retention, outcomes, efficiency, differentiation)",
+          "contact-email": "Your email",
+          "contact-email-ph": "you@school.edu",
+          "contact-cta": "Book My Demo",
+          "contact-note":
+            "We'll reach out within 24 hours to schedule your personalized demo.",
+          "success-title": "You're all set!",
+          "success-text": "We'll be in touch within 24 hours.",
+          "footer-tagline": "English OS for Taiwanese Schools",
+          "footer-love": "Built with 💙 for Taiwan's schools",
+          "footer-copy": "© 2025 Language Boss. All rights reserved.",
+        },
+        zh: {
+          "brand-tagline": "英語學習營運系統，專為台灣校園打造",
+          "nav-problem": "我們解決的問題",
+          "nav-why": "為什麼選擇",
+          "nav-about": "關於我們",
+          "nav-demo": "預約展示",
+          "hero-eyebrow": "一個系統，駕馭整個英語課程",
+          "hero-title": "不是又一個 App，而是英語課程的完整營運系統。",
+          "hero-lede-1": "家長要的不是承諾，而是看得見的進步。",
+          "hero-lede-2": "高參與度 + 明確成效 = 更高留存與營收。",
+          "hero-cta-primary": "預約展示",
+          "hero-cta-secondary": "了解更多",
+          "hero-badge":
+            "由母語英文、熟悉台灣教育現場的團隊打造：中英雙語溝通、以落地與成果為優先。",
+          "card-header": "進步看得見",
+          "stat-1-label": "文法準確率提升",
+          "stat-1-value": "+12%",
+          "stat-1-sub": "兩週內",
+          "stat-2-label": "口說自信度",
+          "stat-2-value": "2.3x",
+          "stat-2-sub": "AI 訓練後",
+          "stat-3-label": "作業批改時間",
+          "stat-3-value": "-65%",
+          "stat-3-sub": "自動評分",
+          "step-1-title": "匯入教材或 PDF",
+          "step-1-desc":
+            "AI 讀取詞彙、文法、主題重點，建立班級知識庫。",
+          "step-2-title": "生成練習與口說腳本",
+          "step-2-desc":
+            "聽說讀寫題型自動產生：情境對話、填空、改錯、同反義、短篇寫作。",
+          "step-3-title": "老師微調後一鍵派送",
+          "step-3-desc":
+            "基礎作業搭配個別加強題，支援美/英發音檢測與配音示範。",
+          "prob-eyebrow": "The problem",
+          "prob-title": "學校不需要「又一個 app」，而是能真正運作的系統",
+          "prob-list-title": "這個系統要能做到：",
+          "prob-1": "讓教學更順，不增加複雜度",
+          "prob-2": "把作業變成洞察，而非例行公事",
+          "prob-3": "跨班、跨校區品質一致",
+          "prob-4": "對家長與利害關係人證明進步",
+          "promise-eyebrow": "The promise",
+          "promise-title":
+            "Teach better. Operate smarter. Grow with confidence.",
+          "promise-body":
+            "Language Boss 協助學校提升教學成效、強化留存、打造更好的營運體質，同時保護老師的精力。",
+          "why-eyebrow": "Why Language Boss",
+          "why-title": "大多數工具只是附加，Language Boss 是基礎設施。",
+          "why-lede":
+            "當學習、回饋與報表分散在不同工具，時間被浪費、動能被稀釋。Language Boss 把課堂、練習、成績與洞察收在同一套系統，為真實教室設計。",
+          "diff-title": "差異化亮點",
+          "diff-1": "為校務運作而生，不是一般消費者工具",
+          "diff-2": "為高品質教學打造，而非隨機內容聚合",
+          "diff-3": "緊貼教學流程，而非泛用的「AI 聊天」",
+          "diff-4": "為台灣學校調校，貼合在地流程與期待",
+          "control-title": "AI 支援老師，而非取代老師。",
+          "control-body":
+            "老師全程掌控教材、題目與派送節奏，AI 處理繁重分析與生成，確保品質一致。",
+          "control-strip": "立即體驗 Language Boss — 預約展示",
+          "feature-1-title": "完整且連貫的學習流程",
+          "feature-1-body": "課堂 → 練習 → 回饋，一氣呵成，不必換工具。",
+          "feature-2-title": "在班級規模下做到個人化",
+          "feature-2-body":
+            "維持班級節奏，同時 AI 自動配置每位學生的適當挑戰。",
+          "feature-3-title": "以口說為核心，流暢自然",
+          "feature-3-body": "情境對話、有示範、有檢測，美/英口音皆可。",
+          "feature-4-title": "教師與主管看得懂的報告",
+          "feature-4-body":
+            "依班級、程度、技能追蹤進步，快速調整教學策略。",
+          "about-eyebrow": "About",
+          "about-title":
+            "We’re building the modern standard for English education.",
+          "about-body":
+            "Language Boss 讓優秀學校持續交付優秀成果—可量化、可複製、可長久。",
+          "beliefs-title": "我們相信",
+          "belief-1": "老師的時間應該用在教學，而不是行政",
+          "belief-2": "有結構且個人化的練習，能讓學生更快進步",
+          "belief-3": "當品質一致且成果可見，學校才能持續成長",
+          "team-tagline": "母語英文、深耕台灣教育現場的團隊",
+          "team-desc": "雙語｜在地｜成果導向",
+          "about-cta-primary": "認識團隊",
+          "about-cta-secondary": "與我們談談",
+          "contact-eyebrow": "Demo",
+          "contact-title": "想看看 Language Boss 如何套用到你的校園？",
+          "contact-body": "30 分鐘內，我們會依你的課程架構示範完整流程。",
+          "contact-headline-1": "看看 Language Boss 的實際運作",
+          "contact-headline-2": "打造你學校的下一套系統",
+          "contact-headline-3": "準備讓英語課全面現代化？",
+          "contact-form-title": "請分享",
+          "contact-q1": "校區/班級數",
+          "contact-q2": "年齡與程度範圍",
+          "contact-q3": "最想改善：留存、成果、效率、差異化？",
+          "contact-email": "你的 Email",
+          "contact-email-ph": "you@school.edu",
+          "contact-cta": "預約 Demo",
+          "contact-note": "我們會在 24 小時內與你聯繫。",
+          "success-title": "已收到！",
+          "success-text": "我們會在 24 小時內回覆。",
+          "footer-tagline": "英語學習營運系統，專為台灣校園打造",
+          "footer-love": "為台灣學校打造，專注可見成效",
+          "footer-copy": "© 2025 Language Boss. All rights reserved.",
+        },
       };
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('hidden');
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
+      const langButtons = document.querySelectorAll(".lang-btn");
+      const elements = document.querySelectorAll("[data-i18n]");
+      const placeholders = document.querySelectorAll("[data-i18n-placeholder]");
 
-      revealElements.forEach(el => observer.observe(el));
+      const savedLang = localStorage.getItem("lb-lang");
+      const currentLang = savedLang || "zh";
+
+      function applyLanguage(lang) {
+        const dict = translations[lang] || translations.en;
+
+        document.documentElement.setAttribute(
+          "lang",
+          lang === "zh" ? "zh-Hant" : "en"
+        );
+
+        langButtons.forEach((btn) =>
+          btn.classList.toggle("active", btn.dataset.lang === lang)
+        );
+
+        elements.forEach((el) => {
+          const key = el.dataset.i18n;
+          if (dict[key]) el.textContent = dict[key];
+        });
+
+        placeholders.forEach((el) => {
+          const key = el.dataset.i18nPlaceholder;
+          if (dict[key]) el.setAttribute("placeholder", dict[key]);
+        });
+
+        localStorage.setItem("lb-lang", lang);
+      }
+
+      langButtons.forEach((btn) =>
+        btn.addEventListener("click", () => applyLanguage(btn.dataset.lang))
+      );
+
+      applyLanguage(currentLang);
 
       // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          const href = this.getAttribute('href');
+          const href = this.getAttribute("href");
           if (href) {
             const target = document.querySelector(href);
             if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
             }
           }
         });

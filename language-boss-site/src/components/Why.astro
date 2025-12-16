@@ -10,12 +10,11 @@ const differentiators = [
 <section class="why" id="why">
   <div class="container">
     <div class="why-header">
-      <p class="eyebrow">Why Language Boss</p>
+      <p class="eyebrow" data-i18n="why-eyebrow">Why Language Boss</p>
       <h2 class="why-title">
-        Most tools are add-ons.<br />
-        Language Boss is <span class="highlight">infrastructure</span>.
+        <span data-i18n="why-title">Most tools are add-ons. Language Boss is infrastructure.</span>
       </h2>
-      <p class="why-lede">
+      <p class="why-lede" data-i18n="why-lede">
         When learning, feedback, and reporting are split across tools, time is lost and momentum fades. 
         Language Boss unifies classes, practice, scores, and insight in one system built for real classrooms.
       </p>
@@ -23,10 +22,10 @@ const differentiators = [
     
     <div class="why-grid">
       <div class="diff-card">
-        <h3 class="diff-title">Differentiators</h3>
+        <h3 class="diff-title" data-i18n="diff-title">Differentiators</h3>
         <div class="diff-list">
           {differentiators.map((item, i) => (
-            <div class="diff-item" style={`--i: ${i}`}>
+            <div class="diff-item" style={`--i: ${i}`} data-i18n={`diff-${i + 1}`}>
               <span class="diff-icon">{item.icon}</span>
               <span class="diff-text">{item.text}</span>
             </div>
@@ -36,18 +35,18 @@ const differentiators = [
       
       <div class="control-card">
         <div class="control-content">
-          <h3 class="control-title">
+          <h3 class="control-title" data-i18n="control-title">
             AI that supports your teachers—not replaces them.
           </h3>
-          <p class="control-body">
+          <p class="control-body" data-i18n="control-body">
             Teachers stay in charge of materials, assignments, and pacing. 
             AI handles the heavy lifting to keep quality consistent.
           </p>
         </div>
         
         <div class="cta-strip">
-          <p class="cta-text">See Language Boss live</p>
-          <a href="#demo" class="btn btn-primary">Book a Demo</a>
+          <p class="cta-text" data-i18n="control-strip">See Language Boss live</p>
+          <a href="#demo" class="btn btn-primary" data-i18n="nav-demo">Book a Demo</a>
         </div>
       </div>
     </div>
@@ -62,8 +61,8 @@ const differentiators = [
             <circle cx="11" cy="9" r="1" fill="currentColor"/>
           </svg>
         </div>
-        <h4>Unified workflow</h4>
-        <p>Lesson → practice → feedback without app-switching or chasing spreadsheets.</p>
+        <h4 data-i18n="feature-1-title">Unified workflow</h4>
+        <p data-i18n="feature-1-body">Lesson → practice → feedback without app-switching or chasing spreadsheets.</p>
       </div>
       
       <div class="feature-item">
@@ -73,8 +72,8 @@ const differentiators = [
             <path d="M16 10V16L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <h4>Personalized at scale</h4>
-        <p>Maintain class rhythm while AI sets the right challenge per student.</p>
+        <h4 data-i18n="feature-2-title">Personalized at scale</h4>
+        <p data-i18n="feature-2-body">Maintain class rhythm while AI sets the right challenge per student.</p>
       </div>
       
       <div class="feature-item">
@@ -84,8 +83,8 @@ const differentiators = [
             <path d="M12 16L15 19L20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h4>Voice-first learning</h4>
-        <p>Speaking practice with context, modeling, and US/UK checks—no awkward drills.</p>
+        <h4 data-i18n="feature-3-title">Voice-first learning</h4>
+        <p data-i18n="feature-3-body">Speaking practice with context, modeling, and US/UK checks—no awkward drills.</p>
       </div>
       
       <div class="feature-item">
@@ -97,8 +96,8 @@ const differentiators = [
             <path d="M10 20H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <h4>Clear reporting</h4>
-        <p>Track progress by class, level, and skill area; adjust strategy instantly.</p>
+        <h4 data-i18n="feature-4-title">Clear reporting</h4>
+        <p data-i18n="feature-4-body">Track progress by class, level, and skill area; adjust strategy instantly.</p>
       </div>
     </div>
   </div>

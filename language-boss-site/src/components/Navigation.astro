@@ -1,8 +1,8 @@
 ---
 const navLinks = [
-  { href: '#problem', label: 'Problem' },
-  { href: '#why', label: 'Why Us' },
-  { href: '#about', label: 'About' },
+  { href: '#problem', label: 'Problem', key: 'nav-problem' },
+  { href: '#why', label: 'Why Us', key: 'nav-why' },
+  { href: '#about', label: 'About', key: 'nav-about' },
 ];
 ---
 
@@ -12,17 +12,22 @@ const navLinks = [
       <img src="/logo.png" alt="Language Boss" class="nav-logo" />
       <div class="nav-brand-text">
         <span class="nav-brand-name">Language Boss</span>
-        <span class="nav-brand-tagline">English OS for Schools</span>
+        <span class="nav-brand-tagline" data-i18n="brand-tagline">English OS for Schools</span>
       </div>
     </a>
     
     <div class="nav-links">
       {navLinks.map(link => (
-        <a href={link.href} class="nav-link">{link.label}</a>
+        <a href={link.href} class="nav-link" data-i18n={link.key}>{link.label}</a>
       ))}
     </div>
     
-    <a href="#demo" class="btn btn-primary nav-cta">Book a Demo</a>
+    <a href="#demo" class="btn btn-primary nav-cta" data-i18n="nav-demo">Book a Demo</a>
+
+    <div class="lang-toggle" aria-label="Language switcher">
+      <button class="lang-btn" data-lang="zh">繁中</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span>
@@ -35,9 +40,14 @@ const navLinks = [
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-inner">
     {navLinks.map(link => (
-      <a href={link.href} class="mobile-link">{link.label}</a>
+      <a href={link.href} class="mobile-link" data-i18n={link.key}>{link.label}</a>
     ))}
-    <a href="#demo" class="btn btn-primary mobile-cta">Book a Demo</a>
+    <a href="#demo" class="btn btn-primary mobile-cta" data-i18n="nav-demo">Book a Demo</a>
+
+    <div class="lang-toggle mobile-lang" aria-label="Language switcher">
+      <button class="lang-btn" data-lang="zh">繁中</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
   </div>
 </div>
 
@@ -140,6 +150,36 @@ const navLinks = [
     font-size: 0.875rem;
   }
   
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(10, 22, 40, 0.05);
+    padding: 0.35rem;
+    border-radius: var(--radius-full);
+  }
+
+  .lang-btn {
+    border: none;
+    background: transparent;
+    padding: 0.35rem 0.75rem;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    color: var(--color-ink-subtle);
+    transition: all 0.25s var(--ease-out-expo);
+  }
+
+  .lang-btn.active {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  .mobile-lang {
+    display: none;
+  }
+
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -236,6 +276,14 @@ const navLinks = [
     }
     
     .nav-toggle {
+      display: flex;
+    }
+
+    .lang-toggle {
+      display: none;
+    }
+
+    .mobile-lang {
       display: flex;
     }
   }

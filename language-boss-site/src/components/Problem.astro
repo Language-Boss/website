@@ -11,18 +11,18 @@ const requirements = [
   <div class="container">
     <div class="problem-grid">
       <div class="problem-content">
-        <p class="eyebrow">The Problem</p>
-        <h2 class="problem-title">
+        <p class="eyebrow" data-i18n="prob-eyebrow">The Problem</p>
+        <h2 class="problem-title" data-i18n="prob-title">
           Schools don't need another app—they need a system that <em>works</em>.
         </h2>
       </div>
       
       <div class="problem-cards">
         <div class="problem-card">
-          <h3 class="card-title">The system must:</h3>
+          <h3 class="card-title" data-i18n="prob-list-title">The system must:</h3>
           <ul class="requirements-list">
             {requirements.map((req, i) => (
-              <li style={`--index: ${i}`}>
+              <li style={`--index: ${i}`} data-i18n={`prob-${i + 1}`}>
                 <span class="req-icon">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -35,11 +35,11 @@ const requirements = [
         </div>
         
         <div class="promise-card">
-          <p class="eyebrow">The Promise</p>
-          <h3 class="promise-title">
+          <p class="eyebrow" data-i18n="promise-eyebrow">The Promise</p>
+          <h3 class="promise-title" data-i18n="promise-title">
             Teach better. Operate smarter. Grow with confidence.
           </h3>
-          <p class="promise-body">
+          <p class="promise-body" data-i18n="promise-body">
             Language Boss helps schools increase teaching effectiveness, strengthen retention, 
             and improve unit economics—without burning out teachers.
           </p>

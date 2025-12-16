@@ -9,21 +9,21 @@ const beliefs = [
 <section class="about" id="about">
   <div class="container">
     <div class="about-header">
-      <p class="eyebrow">About</p>
-      <h2 class="about-title">
+      <p class="eyebrow" data-i18n="about-eyebrow">About</p>
+      <h2 class="about-title" data-i18n="about-title">
         We're building the modern standard for English education.
       </h2>
-      <p class="about-lede">
+      <p class="about-lede" data-i18n="about-body">
         Language Boss helps great schools deliver great outcomes—consistently, measurably, and sustainably.
       </p>
     </div>
     
     <div class="about-grid">
       <div class="beliefs-card">
-        <h3 class="beliefs-title">We Believe</h3>
+        <h3 class="beliefs-title" data-i18n="beliefs-title">We Believe</h3>
         <ul class="beliefs-list">
           {beliefs.map((belief, i) => (
-            <li style={`--i: ${i}`}>
+            <li style={`--i: ${i}`} data-i18n={`belief-${i + 1}`}>
               <span class="belief-marker"></span>
               <span>{belief}</span>
             </li>
@@ -40,15 +40,15 @@ const beliefs = [
           <div class="team-orbit team-orbit-2"></div>
         </div>
         <div class="team-content">
-          <p class="team-tagline">Native English educators who understand Taiwan</p>
-          <p class="team-desc">Bilingual • Local-first • Outcomes-first</p>
+          <p class="team-tagline" data-i18n="team-tagline">Native English educators who understand Taiwan</p>
+          <p class="team-desc" data-i18n="team-desc">Bilingual • Local-first • Outcomes-first</p>
         </div>
         <div class="team-actions">
           <a href="mailto:contact@language-boss.com?subject=Meet%20the%20Language%20Boss%20team" class="btn btn-primary">
-            Meet the Team
+            <span data-i18n="about-cta-primary">Meet the Team</span>
           </a>
           <a href="#demo" class="btn btn-secondary">
-            Talk to Us
+            <span data-i18n="about-cta-secondary">Talk to Us</span>
           </a>
         </div>
       </div>

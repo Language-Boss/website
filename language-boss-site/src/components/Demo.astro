@@ -20,17 +20,17 @@ const questions = [
   
   <div class="container">
     <div class="demo-content">
-      <p class="eyebrow">Demo</p>
-      <h2 class="demo-title">
+      <p class="eyebrow" data-i18n="contact-eyebrow">Demo</p>
+      <h2 class="demo-title" data-i18n="contact-title">
         Want to see Language Boss in your school?
       </h2>
-      <p class="demo-lede">
+      <p class="demo-lede" data-i18n="contact-body">
         In 30 minutes we'll map it to your program structure.
       </p>
       
       <div class="headline-options">
         {headlines.map((headline, i) => (
-          <div class="headline-option" style={`--i: ${i}`}>
+          <div class="headline-option" style={`--i: ${i}`} data-i18n={`contact-headline-${i + 1}`}>
             <span class="headline-number">{i + 1}</span>
             <span class="headline-text">{headline}</span>
           </div>
@@ -40,33 +40,35 @@ const questions = [
     
     <div class="demo-form-wrap">
       <form class="demo-form" id="demo-form">
-        <h3 class="form-title">Tell us about your school</h3>
+        <h3 class="form-title" data-i18n="contact-form-title">Tell us about your school</h3>
         
         {questions.map((q, i) => (
           <div class="form-group" style={`--i: ${i}`}>
-            <label class="form-label">{q.label}</label>
+            <label class="form-label" data-i18n={`contact-q${i + 1}`}>{q.label}</label>
             <input 
               type="text" 
               class="form-input" 
               placeholder={q.placeholder}
               name={`question-${i}`}
+              data-i18n-placeholder={`contact-q${i + 1}`}
             />
           </div>
         ))}
         
         <div class="form-group">
-          <label class="form-label">Your email</label>
+          <label class="form-label" data-i18n="contact-email">Your email</label>
           <input 
             type="email" 
             class="form-input" 
             placeholder="you@school.edu"
             name="email"
             required
+            data-i18n-placeholder="contact-email-ph"
           />
         </div>
         
         <button type="submit" class="btn btn-primary form-submit">
-          <span class="btn-text">Book My Demo</span>
+          <span class="btn-text" data-i18n="contact-cta">Book My Demo</span>
           <span class="btn-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -74,7 +76,7 @@ const questions = [
           </span>
         </button>
         
-        <p class="form-note">
+        <p class="form-note" data-i18n="contact-note">
           We'll reach out within 24 hours to schedule your personalized demo.
         </p>
       </form>
@@ -86,8 +88,8 @@ const questions = [
             <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h3 class="success-title">You're all set!</h3>
-        <p class="success-text">We'll be in touch within 24 hours.</p>
+        <h3 class="success-title" data-i18n="success-title">You're all set!</h3>
+        <p class="success-text" data-i18n="success-text">We'll be in touch within 24 hours.</p>
       </div>
     </div>
   </div>
