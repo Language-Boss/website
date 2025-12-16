@@ -1,0 +1,370 @@
+---
+const headlines = [
+  'See Language Boss in action',
+  'Build your school\'s next system',
+  'Ready to modernize your English program?',
+];
+
+const questions = [
+  { label: 'Number of campuses/classes', placeholder: 'e.g., 3 campuses, 20 classes' },
+  { label: 'Age range and levels', placeholder: 'e.g., Ages 8-15, beginner to advanced' },
+  { label: 'Primary goal', placeholder: 'Retention, outcomes, efficiency, or differentiation' },
+];
+---
+
+<section class="demo" id="demo">
+  <div class="demo-bg">
+    <div class="demo-gradient"></div>
+    <div class="demo-pattern"></div>
+  </div>
+  
+  <div class="container">
+    <div class="demo-content">
+      <p class="eyebrow">Demo</p>
+      <h2 class="demo-title">
+        Want to see Language Boss in your school?
+      </h2>
+      <p class="demo-lede">
+        In 30 minutes we'll map it to your program structure.
+      </p>
+      
+      <div class="headline-options">
+        {headlines.map((headline, i) => (
+          <div class="headline-option" style={`--i: ${i}`}>
+            <span class="headline-number">{i + 1}</span>
+            <span class="headline-text">{headline}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="demo-form-wrap">
+      <form class="demo-form" id="demo-form">
+        <h3 class="form-title">Tell us about your school</h3>
+        
+        {questions.map((q, i) => (
+          <div class="form-group" style={`--i: ${i}`}>
+            <label class="form-label">{q.label}</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              placeholder={q.placeholder}
+              name={`question-${i}`}
+            />
+          </div>
+        ))}
+        
+        <div class="form-group">
+          <label class="form-label">Your email</label>
+          <input 
+            type="email" 
+            class="form-input" 
+            placeholder="you@school.edu"
+            name="email"
+            required
+          />
+        </div>
+        
+        <button type="submit" class="btn btn-primary form-submit">
+          <span class="btn-text">Book My Demo</span>
+          <span class="btn-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        
+        <p class="form-note">
+          We'll reach out within 24 hours to schedule your personalized demo.
+        </p>
+      </form>
+      
+      <div class="success-message" id="success-message">
+        <div class="success-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="success-title">You're all set!</h3>
+        <p class="success-text">We'll be in touch within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .demo {
+    position: relative;
+    padding: 6rem 0;
+    background: var(--color-ink);
+    color: white;
+    overflow: hidden;
+  }
+  
+  .demo-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .demo-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(232, 93, 76, 0.08) 0%, transparent 50%);
+  }
+  
+  .demo-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  .demo-content {
+    position: sticky;
+    top: 8rem;
+  }
+  
+  .demo-content .eyebrow {
+    color: var(--color-mint);
+  }
+  
+  .demo-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .demo-lede {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+  }
+  
+  .headline-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .headline-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s var(--ease-out-expo);
+    cursor: default;
+  }
+  
+  .headline-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+  }
+  
+  .headline-number {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+  
+  .headline-text {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .demo-form-wrap {
+    position: relative;
+  }
+  
+  .demo-form {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    border: 1.5px solid rgba(10, 22, 40, 0.1);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+  
+  .form-input::placeholder {
+    color: var(--color-ink-subtle);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-accent-glow);
+  }
+  
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .btn-icon {
+    display: flex;
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  
+  .form-submit:hover .btn-icon {
+    transform: translateX(4px);
+  }
+  
+  .form-note {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--color-ink-subtle);
+    margin-top: 1rem;
+  }
+  
+  .success-message {
+    position: absolute;
+    inset: 0;
+    background: white;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.4s var(--ease-out-expo);
+  }
+  
+  .success-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  
+  .success-icon {
+    color: var(--color-mint);
+    margin-bottom: 1.5rem;
+    animation: popIn 0.5s var(--ease-out-back);
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  
+  .success-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-text {
+    color: var(--color-ink-subtle);
+  }
+  
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .demo-content {
+      position: static;
+      text-align: center;
+    }
+    
+    .headline-options {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('demo-form') as HTMLFormElement;
+  const successMessage = document.getElementById('success-message');
+  
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Build mailto link with form data
+    const subject = encodeURIComponent('Language Boss Demo Request');
+    const body = encodeURIComponent(`
+Hi Language Boss team,
+
+I'd like to schedule a demo. Here are my details:
+
+Campuses/Classes: ${data['question-0'] || 'Not specified'}
+Age Range & Levels: ${data['question-1'] || 'Not specified'}
+Primary Goal: ${data['question-2'] || 'Not specified'}
+Email: ${data.email}
+
+Looking forward to hearing from you!
+    `.trim());
+    
+    // Open email client
+    window.location.href = `mailto:contact@language-boss.com?subject=${subject}&body=${body}`;
+    
+    // Show success message
+    successMessage?.classList.add('show');
+  });
+</script>
+

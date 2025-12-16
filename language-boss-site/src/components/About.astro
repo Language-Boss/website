@@ -1,0 +1,277 @@
+---
+const beliefs = [
+  'Teachers should spend time teaching, not doing admin.',
+  'Students improve faster when practice is structured and personalized.',
+  'Schools grow when quality is consistent and progress is visible.',
+];
+---
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-header">
+      <p class="eyebrow">About</p>
+      <h2 class="about-title">
+        We're building the modern standard for English education.
+      </h2>
+      <p class="about-lede">
+        Language Boss helps great schools deliver great outcomes—consistently, measurably, and sustainably.
+      </p>
+    </div>
+    
+    <div class="about-grid">
+      <div class="beliefs-card">
+        <h3 class="beliefs-title">We Believe</h3>
+        <ul class="beliefs-list">
+          {beliefs.map((belief, i) => (
+            <li style={`--i: ${i}`}>
+              <span class="belief-marker"></span>
+              <span>{belief}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="team-card">
+        <div class="team-visual">
+          <div class="team-circle">
+            <span class="team-initials">LB</span>
+          </div>
+          <div class="team-orbit team-orbit-1"></div>
+          <div class="team-orbit team-orbit-2"></div>
+        </div>
+        <div class="team-content">
+          <p class="team-tagline">Native English educators who understand Taiwan</p>
+          <p class="team-desc">Bilingual • Local-first • Outcomes-first</p>
+        </div>
+        <div class="team-actions">
+          <a href="mailto:contact@language-boss.com?subject=Meet%20the%20Language%20Boss%20team" class="btn btn-primary">
+            Meet the Team
+          </a>
+          <a href="#demo" class="btn btn-secondary">
+            Talk to Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="about-decoration">
+    <div class="deco-circle deco-circle-1"></div>
+    <div class="deco-circle deco-circle-2"></div>
+  </div>
+</section>
+
+<style>
+  .about {
+    position: relative;
+    padding: 6rem 0;
+    background: var(--color-paper);
+    overflow: hidden;
+  }
+  
+  .about-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+  
+  .about-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-ink);
+  }
+  
+  .about-lede {
+    font-size: 1.125rem;
+    color: var(--color-ink-light);
+    line-height: 1.7;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .beliefs-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 
+      0 2px 8px rgba(10, 22, 40, 0.04),
+      0 12px 40px rgba(10, 22, 40, 0.06);
+  }
+  
+  .beliefs-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: 1.5rem;
+  }
+  
+  .beliefs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .beliefs-list li {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--color-ink-light);
+    line-height: 1.6;
+  }
+  
+  .belief-marker {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    margin-top: 0.625rem;
+  }
+  
+  .team-card {
+    background: linear-gradient(135deg, var(--color-ink) 0%, #1e3a5f 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .team-visual {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+  }
+  
+  .team-circle {
+    position: absolute;
+    inset: 20px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .team-initials {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .team-orbit {
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+  }
+  
+  .team-orbit::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-mint);
+    border-radius: 50%;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team-orbit-1 {
+    animation-duration: 15s;
+  }
+  
+  .team-orbit-2 {
+    inset: -15px;
+    animation-duration: 25s;
+    animation-direction: reverse;
+  }
+  
+  .team-orbit-2::before {
+    background: var(--color-gold);
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .team-content {
+    margin-bottom: 2rem;
+  }
+  
+  .team-tagline {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-desc {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .team-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .team-actions .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+  
+  .team-actions .btn-secondary:hover {
+    background: white;
+    color: var(--color-ink);
+    border-color: white;
+  }
+  
+  .about-decoration {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(10, 22, 40, 0.05);
+  }
+  
+  .deco-circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    right: -100px;
+  }
+  
+  .deco-circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    left: -100px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

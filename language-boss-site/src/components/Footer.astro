@@ -1,0 +1,156 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="/logo.png" alt="Language Boss" class="footer-logo" />
+        <div class="footer-brand-text">
+          <span class="footer-brand-name">Language Boss</span>
+          <span class="footer-brand-tagline">English OS for Taiwanese Schools</span>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="#problem">Problem</a>
+        <a href="#why">Why Us</a>
+        <a href="#about">About</a>
+        <a href="#demo">Demo</a>
+      </div>
+      
+      <div class="footer-contact">
+        <a href="mailto:contact@language-boss.com" class="footer-email">
+          contact@language-boss.com
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copy">© {currentYear} Language Boss. All rights reserved.</p>
+      <p class="footer-tagline">Built with 💙 for Taiwan's schools</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-paper-warm);
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(10, 22, 40, 0.06);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(10, 22, 40, 0.06);
+  }
+  
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+  
+  .footer-brand-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  
+  .footer-brand-tagline {
+    font-size: 0.75rem;
+    color: var(--color-ink-subtle);
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-ink-light);
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-accent);
+  }
+  
+  .footer-email {
+    font-size: 0.9375rem;
+    color: var(--color-ink-light);
+    transition: color 0.2s ease;
+  }
+  
+  .footer-email:hover {
+    color: var(--color-accent);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-copy {
+    font-size: 0.8125rem;
+    color: var(--color-ink-subtle);
+  }
+  
+  .footer-tagline {
+    font-size: 0.8125rem;
+    color: var(--color-ink-subtle);
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-brand {
+      justify-content: center;
+    }
+    
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
