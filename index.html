@@ -1047,6 +1047,96 @@
 
       applyLanguage(currentLang);
 
+
+      const statValues = Array.from(document.querySelectorAll(".stat-value"));
+      let statsPrepared = false;
+      let statsAnimated = false;
+
+      function parseStatValue(value) {
+        const match = value.trim().match(/^([+−-])?\s*([0-9]*\.?[0-9]+)(.*)$/);
+        if (!match) return null;
+
+        const sign = match[1] === "−" ? "-" : match[1] || "";
+        const numberPart = match[2];
+        const decimals = numberPart.includes(".")
+          ? numberPart.split(".")[1].length
+          : 0;
+
+        return {
+          sign,
+          number: parseFloat(numberPart),
+          decimals,
+          suffix: match[3].trim(),
+        };
+      }
+
+      function formatStatValue(current, { sign, decimals, suffix }) {
+        const prefix = sign || (current < 0 ? "-" : "");
+        const display = Math.abs(current).toFixed(decimals);
+        return `${prefix}${display}${suffix}`;
+      }
+
+      function prepareStatTargets() {
+        statValues.forEach((el) => {
+          const parsed = parseStatValue(el.textContent);
+          if (!parsed) return;
+
+          el.dataset.statTarget = el.textContent.trim();
+          el.textContent = formatStatValue(0, parsed);
+        });
+        statsPrepared = true;
+      }
+
+      function animateStat(el) {
+        const targetString = el.dataset.statTarget || el.textContent;
+        const parsed = parseStatValue(targetString);
+        if (!parsed) return;
+
+        const { sign, number } = parsed;
+        const targetValue = sign === "-" ? -number : number;
+        const duration = 1200;
+        const start = performance.now();
+
+        function step(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const current = targetValue * progress;
+          el.textContent = formatStatValue(current, parsed);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      function startStatAnimation() {
+        if (statsAnimated) return;
+        if (!statsPrepared) prepareStatTargets();
+        statsAnimated = true;
+        statValues.forEach(animateStat);
+      }
+
+      prepareStatTargets();
+
+      const heroTrigger =
+        document.querySelector(".hero-card") || document.querySelector(".hero");
+
+      if ("IntersectionObserver" in window && heroTrigger) {
+        const statObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startStatAnimation();
+                statObserver.disconnect();
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+
+        statObserver.observe(heroTrigger);
+      } else {
+        startStatAnimation();
+      }
+
       const fadeEls = document.querySelectorAll(".fade, .card, .panel, .cta");
       const observer = new IntersectionObserver(
         (entries) => {
