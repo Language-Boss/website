@@ -16,1050 +16,260 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="no-js">
-    <div class="page">
-      <div class="bg-planet"></div>
-      <div class="bg-grid"></div>
+  <body>
+    <div class="noise"></div>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <img src="logo.png" alt="Language Boss" />
+        </div>
+        <div>
+          <div class="brand-title">Language Boss</div>
+          <p class="brand-sub">英語學習營運系統，專為台灣校園打造</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#problem">我們解決的問題</a>
+        <a href="#why">為什麼選擇</a>
+        <a href="#product">產品</a>
+        <a href="#about">關於我們</a>
+        <a class="button primary" href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo">預約展示</a>
+      </nav>
+    </header>
 
-      <header class="hero" id="top">
-        <nav class="nav">
-          <div class="brand">
-            <div class="logo-wrap">
-              <img src="logo.png" alt="Language Boss logo" loading="lazy" />
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Run your school on one system</p>
+          <h1>Not another app. A complete operating system for your English program.</h1>
+          <p class="lede">
+            Parents don’t want promises. They want progress they can see.
+            Stronger engagement + clear progress = higher retention and revenue.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo">預約展示</a>
+            <a class="button ghost" href="#ai">了解 AI 流程</a>
+          </div>
+          <div class="badge">
+            <div class="dot">LB</div>
+            <p>
+              由母語英文、熟悉台灣教育現場的團隊打造：中英雙語溝通、以落地與成果為優先。
+              Built by native English educators and operators who understand Taiwan—bilingual, local-first, outcomes-first.
+            </p>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span class="dot pulse"></span>
+            進步看得見
+          </div>
+          <div class="stats">
+            <div>
+              <div class="stat-label">文法準確率提升</div>
+              <div class="stat-value">+12%</div>
+              <div class="stat-sub">兩週內</div>
             </div>
             <div>
-              <div class="brand-title">Language Boss</div>
-              <div class="brand-sub" data-i18n="brand-sub">
-                英語學習營運系統，專為台灣校園打造
-              </div>
+              <div class="stat-label">口說自信提升</div>
+              <div class="stat-value">2.3x</div>
+              <div class="stat-sub">AI 訓練後</div>
+            </div>
+            <div>
+              <div class="stat-label">作業批改時間</div>
+              <div class="stat-value">-65%</div>
+              <div class="stat-sub">自動評分＋回饋</div>
             </div>
           </div>
-          <div class="nav-actions">
-            <a href="#problem" class="nav-link" data-i18n="nav-problem"
-              >我們解決的問題</a
-            >
-            <a href="#why" class="nav-link" data-i18n="nav-why">為什麼選擇</a>
-            <a href="#product" class="nav-link" data-i18n="nav-platform"
-              >產品</a
-            >
-            <a href="#about" class="nav-link" data-i18n="nav-about">關於我們</a>
-            <a href="#demo" class="btn primary" data-i18n="nav-demo"
-              >預約展示</a
-            >
-            <div class="lang-toggle" aria-label="Language switcher">
-              <button class="lang-btn active" data-lang="zh">繁中</button>
-              <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-          </div>
-        </nav>
+          <ol class="timeline">
+            <li>
+              <h3>匯入教材或 PDF</h3>
+              <p>AI 讀取詞彙、文法、主題重點，建立班級知識庫。</p>
+            </li>
+            <li>
+              <h3>生成練習與口說腳本</h3>
+              <p>聽說讀寫題型自動產生：情境對話、填空、改錯、同反義、短篇寫作。</p>
+            </li>
+            <li>
+              <h3>老師微調後一鍵派送</h3>
+              <p>基礎作業搭配個別加強題，支援美/英發音檢測與配音示範。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-        <div class="hero-grid">
-          <div class="hero-copy fade">
-            <p class="eyebrow" data-i18n="hero-eyebrow">
-              Run your school on one system
+      <section class="problem" id="problem">
+        <div class="section-head">
+          <p class="eyebrow">Less busywork, more learning</p>
+          <h2>家長、老師、學生的三方需求，一次解決。</h2>
+          <p class="lede">
+            從招生到續班，我們用 AI 把流程連成一條線。老師專注教學，家長感受成效，學生保持動力。
+          </p>
+        </div>
+        <div class="cards three">
+          <article class="card">
+            <h3>老師的時間回來了</h3>
+            <p>備課、批改、回饋自動化。每週省下的 6 小時，用在陪伴學生。</p>
+          </article>
+          <article class="card">
+            <h3>家長看得到成果</h3>
+            <p>AI 分析聽說讀寫表現，輸出簡明報告與練習建議，透明又安心。</p>
+          </article>
+          <article class="card">
+            <h3>學生開口更自然</h3>
+            <p>口說腳本與情境對話因人而異，真人配音示範，信心逐步累積。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="why" id="why">
+        <div class="section-head">
+          <p class="eyebrow">Built for Taiwan</p>
+          <h2>為什麼選擇 Language Boss</h2>
+        </div>
+        <div class="grid two">
+          <article class="card highlight">
+            <h3>母語級師資 × 本地場景</h3>
+            <p>
+              團隊來自台灣頂尖外師與教育營運，知道學校要什麼、家長信什麼。教材、題型、口音都為台灣客製。
             </p>
-            <h1 data-i18n="hero-title">
-              Not another app. A complete operating system for your English
-              program.
-            </h1>
-            <div class="hero-lede-stack">
-              <p class="lede" data-i18n="hero-lede-1">
-                Parents don’t want promises. They want progress they can see.
-              </p>
-              <p class="lede" data-i18n="hero-lede-2">
-                Stronger engagement + clear progress = higher retention and
-                revenue.
-              </p>
-            </div>
-            <div class="hero-actions">
-              <a
-                class="btn primary"
-                href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo"
-                data-i18n="hero-cta-primary"
-                >預約展示</a
-              >
-              <a class="btn ghost" href="#ai" data-i18n="hero-cta-secondary"
-                >了解 AI 流程</a
-              >
-            </div>
-            <div class="badge-inline">
-              <div class="badge-icon">LB</div>
-              <div class="badge-text" data-i18n="bilingual-strip">
-                由母語英文、熟悉台灣教育現場的團隊打造：中英雙語溝通、以落地與成果為優先。
-                Built by native English educators and operators who understand
-                Taiwan—bilingual, local-first, outcomes-first.
-              </div>
+          </article>
+          <article class="card">
+            <h3>立即落地的工作流程</h3>
+            <p>
+              與現有 LMS、教務流程無縫串接；帳號、班級、作業一鍵導入。最短一週內即可上線班級。
+            </p>
+          </article>
+          <article class="card">
+            <h3>可量化的成果儀表板</h3>
+            <p>
+              追蹤口說流暢度、文法準確率、課堂互動度與作業完成率。AI 建議下一步補強，讓家長和校長都看得懂。
+            </p>
+          </article>
+          <article class="card">
+            <h3>隱私與安全並重</h3>
+            <p>
+              學生語音、作業資料全程加密。支援台灣地區合規需求，並可選擇專屬部署。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="product" id="product">
+        <div class="section-head">
+          <p class="eyebrow">Everything in one place</p>
+          <h2>一個平台，涵蓋招生、教學、續班</h2>
+        </div>
+        <div class="product-layout">
+          <div class="product-summary">
+            <h3>每天最常用的畫面，重新設計</h3>
+            <p>
+              老師透過 AI 問答、批改與配音，省去繁瑣按鈕；學生用引導式介面完成練習；家長在訊息與報告中即時看到進步。
+            </p>
+            <div class="tags">
+              <span>教師模式</span>
+              <span>學生模式</span>
+              <span>家長模式</span>
+              <span>口說 AI 配音</span>
+              <span>作業自動批改</span>
             </div>
           </div>
-
-          <div class="hero-card fade">
-            <div class="card-header">
-              <div class="status-dot"></div>
-              <span data-i18n="card-header">進步看得見</span>
+          <div class="product-stack">
+            <div class="stack-card">
+              <h4>教師｜AI 批改與教案助手</h4>
+              <ul>
+                <li>匯入教材後即刻生成聽說讀寫題型，支持美/英發音示範。</li>
+                <li>AI 分析學生弱點，推薦差異化加強題，批改與回饋一鍵完成。</li>
+                <li>班級知識庫可共享、版本控管，方便教研團隊協作。</li>
+              </ul>
             </div>
-            <div class="stat-row">
-              <div>
-                <div class="stat-label" data-i18n="stat-1-label">
-                  文法準確率提升
-                </div>
-                <div class="stat-value" data-i18n="stat-1-value">+12%</div>
-                <div class="stat-sub" data-i18n="stat-1-sub">兩週內</div>
-              </div>
-              <div>
-                <div class="stat-label" data-i18n="stat-2-label">
-                  口說自信提升
-                </div>
-                <div class="stat-value" data-i18n="stat-2-value">2.3x</div>
-                <div class="stat-sub" data-i18n="stat-2-sub">AI 訓練後</div>
-              </div>
-              <div>
-                <div class="stat-label" data-i18n="stat-3-label">
-                  作業批改時間
-                </div>
-                <div class="stat-value" data-i18n="stat-3-value">-65%</div>
-                <div class="stat-sub" data-i18n="stat-3-sub">
-                  自動評分＋回饋
-                </div>
-              </div>
+            <div class="stack-card">
+              <h4>學生｜練習與口說教練</h4>
+              <ul>
+                <li>自適應題組、情境對話、口說腳本，逐步解鎖，降低挫折。</li>
+                <li>即時語音偵錯與信心指標，明確指出可改進的發音與用詞。</li>
+                <li>遊戲化積分與提醒，讓每日 10 分鐘練習變成習慣。</li>
+              </ul>
             </div>
-            <div class="timeline">
-              <div class="timeline-step">
-                <div class="dot"></div>
-                <div>
-                  <div class="timeline-title" data-i18n="step-1-title">
-                    匯入教材或 PDF
-                  </div>
-                  <div class="timeline-desc" data-i18n="step-1-desc">
-                    AI 讀取詞彙、文法、主題重點，建立班級知識庫。
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <div class="dot"></div>
-                <div>
-                  <div class="timeline-title" data-i18n="step-2-title">
-                    生成練習與口說腳本
-                  </div>
-                  <div class="timeline-desc" data-i18n="step-2-desc">
-                    聽說讀寫題型自動產生：情境對話、填空、改錯、同反義、短篇寫作。
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <div class="dot"></div>
-                <div>
-                  <div class="timeline-title" data-i18n="step-3-title">
-                    老師微調後一鍵派送
-                  </div>
-                  <div class="timeline-desc" data-i18n="step-3-desc">
-                    基礎作業搭配個別加強題，支援美/英發音檢測與配音示範。
-                  </div>
-                </div>
-              </div>
+            <div class="stack-card">
+              <h4>家長｜成果回報與續班動機</h4>
+              <ul>
+                <li>透明的進度報告：文法準確率、口說流暢度、作業完成率。</li>
+                <li>AI 生成的家庭練習建議，讓家長 5 分鐘內陪孩子複習。</li>
+                <li>自動化通知與收款連結，提升續班轉換率。</li>
+              </ul>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main>
-        <section class="section section--orbit fade" id="problem">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="prob-eyebrow">The problem</p>
-            <h2 data-i18n="prob-title">
-              學校不需要「又一個 app」，而是能真正運作的系統
-            </h2>
+      <section class="ai" id="ai">
+        <div class="section-head">
+          <p class="eyebrow">AI that speaks your classroom</p>
+          <h2>AI 如何運作</h2>
+          <p class="lede">用本地資料訓練，落地、可控、符合教學現場。</p>
+        </div>
+        <div class="ai-flow">
+          <div class="flow-step">
+            <div class="step-count">1</div>
+            <h3>本地化語料與口音</h3>
+            <p>收錄台灣校園常見情境、考試題型與口音，保留文化脈絡與用詞習慣。</p>
           </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3 data-i18n="prob-list-title">這個系統要能做到：</h3>
-              <ul class="bullet-list">
-                <li data-i18n="prob-1">讓教學更順，不增加複雜度</li>
-                <li data-i18n="prob-2">把作業變成洞察，而非例行公事</li>
-                <li data-i18n="prob-3">跨班、跨校區品質一致</li>
-                <li data-i18n="prob-4">對家長與利害關係人證明進步</li>
-              </ul>
-            </article>
-            <article class="card">
-              <p class="eyebrow" data-i18n="promise-eyebrow">The promise</p>
-              <h3 data-i18n="promise-title">
-                Teach better. Operate smarter. Grow with confidence.
-              </h3>
-              <p class="lede" data-i18n="promise-body">
-                Language Boss
-                協助學校提升教學成效、強化留存、打造更好的營運體質，同時保護老師的精力。
-              </p>
-            </article>
+          <div class="flow-step">
+            <div class="step-count">2</div>
+            <h3>安全的資料隔離</h3>
+            <p>學校資料專庫存放，不混用於其他模型訓練。可選擇專屬部署或 API 模式。</p>
           </div>
-        </section>
+          <div class="flow-step">
+            <div class="step-count">3</div>
+            <h3>教師掌控的 AI</h3>
+            <p>AI 生成的題目與回饋可被老師即時微調；系統記錄所有版本變更，方便審核。</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-count">4</div>
+            <h3>成果導向的優化</h3>
+            <p>根據班級與個人學習曲線，調整題目難度與配音示範，持續提升課堂參與度。</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="section section--beam fade" id="why">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="why-eyebrow">Why Language Boss</p>
-            <h2 data-i18n="why-title">
-              Most tools are add-ons. Language Boss is infrastructure.
-            </h2>
-            <p class="lede" data-i18n="why-body">
-              當學習、回饋與報表分散在不同工具，時間被浪費、動能被稀釋。Language
-              Boss 把課堂、練習、成績與洞察收在同一套系統，為真實教室設計。
-            </p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3 data-i18n="diff-title">差異化亮點</h3>
-              <ul class="bullet-list">
-                <li data-i18n="diff-1">為校務運作而生，不是一般消費者工具</li>
-                <li data-i18n="diff-2">為高品質教學打造，而非隨機內容聚合</li>
-                <li data-i18n="diff-3">緊貼教學流程，而非泛用的「AI 聊天」</li>
-                <li data-i18n="diff-4">為台灣學校調校，貼合在地流程與期待</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3 data-i18n="control-title">
-                AI that supports your teachers—not replaces them.
-              </h3>
-              <p class="lede" data-i18n="control-body">
-                老師全程掌控教材、題目與派送節奏，AI
-                處理繁重分析與生成，確保品質一致。
-              </p>
-              <div class="strip alt cta-strip">
-                <p data-i18n="control-strip">
-                  See Language Boss live — Book a demo
-                </p>
-                <a
-                  class="btn primary"
-                  href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo"
-                  data-i18n="nav-demo"
-                  >預約展示</a
-                >
-              </div>
-            </article>
-          </div>
-        </section>
+      <section class="about" id="about">
+        <div class="section-head">
+          <p class="eyebrow">People + product</p>
+          <h2>團隊與承諾</h2>
+          <p class="lede">
+            我們來自台灣頂尖外師、雙語教師與教育營運，曾在英語學校、線上教育、外商科技領導產品與課程。文化溝通順暢、回覆迅速、重視成果。
+          </p>
+        </div>
+        <div class="cards two">
+          <article class="card">
+            <h3>共建最佳實踐</h3>
+            <p>我們與合作學校共同建立教材模板、回饋話術與家長溝通套件，確保每一個校區都能快速複製成功經驗。</p>
+          </article>
+          <article class="card">
+            <h3>持續的本地支援</h3>
+            <p>專屬客服群組、教學顧問與技術支援，協助老師、行政與行銷部門整合流程，讓 AI 真的落地。</p>
+          </article>
+        </div>
+      </section>
 
-        <!-- <section class="section fade" id="benefits">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="benefit-eyebrow">關鍵優勢</p>
-            <h2 data-i18n="benefit-title">Premium learning, at scale</h2>
-            <p class="lede" data-i18n="benefit-sub">
-              統一標準、可見成果、減少行政負擔，讓「Language Boss
-              標準」成為家長信任的品質保證。
-            </p>
-          </div>
-          <div class="tile-grid">
-            <article class="tile">
-              <h3 data-i18n="tile-1-title">Premium learning, at scale</h3>
-              <p data-i18n="tile-1-body">
-                Deliver a consistent, high-quality experience across every class
-                and every teacher.
-              </p>
-            </article>
-            <article class="tile">
-              <h3 data-i18n="tile-2-title">Real progress you can see</h3>
-              <p data-i18n="tile-2-body">
-                Transform daily practice into clear, actionable performance
-                signals.
-              </p>
-            </article>
-            <article class="tile">
-              <h3 data-i18n="tile-3-title">Less admin, more teaching</h3>
-              <p data-i18n="tile-3-body">
-                Automate the repetitive workflow so staff time goes where it
-                matters.
-              </p>
-            </article>
-            <article class="tile">
-              <h3 data-i18n="tile-4-title">A school-wide advantage</h3>
-              <p data-i18n="tile-4-body">
-                Build a recognizable “Language Boss standard” parents notice and
-                recommend.
-              </p>
-            </article>
-          </div>
-          <div class="strip">
-            <p data-i18n="social-proof">
-              Used by forward-thinking schools that want results, not just
-              features.
-            </p>
-          </div>
-        </section> -->
-
-        <!-- <section class="section fade" id="product">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="os-eyebrow">營運系統</p>
-            <h2 data-i18n="os-title">一個後台，讓英語課程高效運轉</h2>
-            <p class="lede" data-i18n="os-lede">
-              從課程規劃到作業回饋，Language Boss
-              讓管理者、老師、學生都在同一個數據真相上。
-            </p>
-          </div>
-          <div class="card-grid three">
-            <article class="card">
-              <div class="card-icon">OS</div>
-              <h3 data-i18n="card-admin-title">校方控制台</h3>
-              <p data-i18n="card-admin-body">
-                跨校區快速建班、配置老師與學生、統一教材與成效追蹤。
-              </p>
-              <ul class="bullet-list">
-                <li data-i18n="card-admin-b1">
-                  角色權限管理：校方、老師、學生分層控管
-                </li>
-                <li data-i18n="card-admin-b2">作業、排行榜、測驗集中化</li>
-                <li data-i18n="card-admin-b3">每次作業的即時成績與弱點趨勢</li>
-              </ul>
-            </article>
-            <article class="card">
-              <div class="card-icon">AI</div>
-              <h3 data-i18n="card-teacher-title">老師 AI 助教</h3>
-              <p data-i18n="card-teacher-body">
-                上傳素材、讓 AI 提議題型，再由老師決定與調整。
-              </p>
-              <ul class="bullet-list">
-                <li data-i18n="card-teacher-b1">一鍵轉教材為活動與作業</li>
-                <li data-i18n="card-teacher-b2">美/英發音辨識，逐題口說評分</li>
-                <li data-i18n="card-teacher-b3">
-                  AI 建議題目，老師隨時編輯腳本
-                </li>
-              </ul>
-            </article>
-            <article class="card">
-              <div class="card-icon">Go</div>
-              <h3 data-i18n="card-student-title">學生學習體驗</h3>
-              <p data-i18n="card-student-body">
-                每日/每週測驗、復習模式、可聽可說的閃卡，並透過匿名鼓勵提高投入。
-              </p>
-              <ul class="bullet-list">
-                <li data-i18n="card-student-b1">
-                  口說與輸入並行，每題即時回饋
-                </li>
-                <li data-i18n="card-student-b2">
-                  弱點自動檢測：文法、詞彙、聽說
-                </li>
-                <li data-i18n="card-student-b3">
-                  排行榜與正向鼓勵，提升參與度
-                </li>
-              </ul>
-            </article>
-          </div>
-        </section> -->
-
-        <!-- <section class="section fade" id="product-detail">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="prod-eyebrow">Product</p>
-            <h2 data-i18n="prod-title">
-              The operating system for your English program
-            </h2>
-            <p class="lede" data-i18n="prod-body">
-              Language Boss
-              連結課綱、練習、評量與報告，讓老師專心教，學生持續進步，主管即時看見成效。
-            </p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3 data-i18n="prod-1-title">1) A unified learning workflow</h3>
-              <p data-i18n="prod-1-body">
-                從課堂到練習到回饋不需換工具、不用追學生或匯出試算表。
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="prod-2-title">
-                2) Personalized practice at classroom scale
-              </h3>
-              <p data-i18n="prod-2-body">
-                同步維持班級節奏，AI 自動安排適合每位學生的挑戰與加強。
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="prod-3-title">
-                3) Voice-first learning that feels natural
-              </h3>
-              <p data-i18n="prod-3-body">
-                口說練習有情境、有示範、可檢測，美/英口音皆可；不再尷尬或零碎。
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="prod-4-title">
-                4) Clear reporting for teachers and leadership
-              </h3>
-              <p data-i18n="prod-4-body">
-                按班級、程度、技能面向追蹤進步，即時調整教學策略。
-              </p>
-            </article>
-          </div>
-        </section> -->
-
-        <!-- <section class="section fade" id="ai">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="ai-eyebrow">AI 生態</p>
-            <h2 data-i18n="ai-title">為台灣教室調校的精準 AI</h2>
-            <p class="lede" data-i18n="ai-lede">
-              貼合課本、程度、文化語境；AI 做繁重分析，老師掌控教學品質。
-            </p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <div class="card-icon">AI</div>
-              <h3 data-i18n="ai-card1-title">自適應練習</h3>
-              <ul class="bullet-list">
-                <li data-i18n="ai-card1-b1">自然回答中自動判斷文法/詞彙缺口</li>
-                <li data-i18n="ai-card1-b2">
-                  輸出輸入口音可切換；配音示範＋辨識
-                </li>
-                <li data-i18n="ai-card1-b3">
-                  完成基礎作業後，自動排個人化加強題
-                </li>
-                <li data-i18n="ai-card1-b4">AI 產出分數、信心度與教師建議</li>
-              </ul>
-            </article>
-            <article class="card">
-              <div class="card-icon">TX</div>
-              <h3 data-i18n="ai-card2-title">內容智慧</h3>
-              <ul class="bullet-list">
-                <li data-i18n="ai-card2-b1">解析書本/PDF 生成口說與互動題</li>
-                <li data-i18n="ai-card2-b2">
-                  題型：情境對話、填空、改錯、同反義、短文
-                </li>
-                <li data-i18n="ai-card2-b3">每一題都可由老師編輯與覆核</li>
-                <li data-i18n="ai-card2-b4">閃卡自動產生真人風格語音示例</li>
-              </ul>
-            </article>
-          </div>
-          <!-- <div class="panel">
-            <div>
-              <p class="eyebrow" data-i18n="panel-eyebrow">練習設計</p>
-              <h3 class="panel-title" data-i18n="panel-title">
-                作業與訓練的範例
-              </h3>
-              <div class="tag-grid">
-                <span class="pill" data-i18n="tag-1">把新字放進真實句子</span>
-                <span class="pill" data-i18n="tag-2"
-                  >口說定義＋文字定義雙軌</span
-                >
-                <span class="pill" data-i18n="tag-3">聽力填空與文法填空</span>
-                <span class="pill" data-i18n="tag-4">同義 / 反義轉換</span>
-                <span class="pill" data-i18n="tag-5">短篇寫作涵蓋多個新字</span>
-                <span class="pill" data-i18n="tag-6"
-                  >修正 AI 提供的錯誤句子</span
-                >
-                <span class="pill" data-i18n="tag-7">情境對話角色扮演</span>
-              </div>
-            </div>
-            <div class="callout">
-              <div class="callout-title" data-i18n="callout-title">
-                害羞學生也能被看見
-              </div>
-              <p class="callout-text" data-i18n="callout-text">
-                一位學生的文法分數從 70% 漲到
-                98%，全班獲得咖啡獎勵—成就被看見，但姓名保持匿名。
-              </p>
-              <p class="callout-note" data-i18n="callout-note">
-                用正向故事推動班級動力。
-              </p>
-            </div>
-          </div> -->
-        <!-- </section> -->
-
-        <!-- <section class="section fade">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="roles-eyebrow">角色價值</p>
-            <h2 data-i18n="roles-title">讓每個利害關係人都看得到成果</h2>
-            <p class="lede" data-i18n="roles-lede">
-              校方掌握 KPI，老師節省備課時間，學生得到專屬練習。
-            </p>
-          </div>
-          <div class="card-grid three">
-            <article class="card compact">
-              <div class="card-icon">HQ</div>
-              <h3 data-i18n="roles-card1-title">校方與主管</h3>
-              <ul class="bullet-list">
-                <li data-i18n="roles-card1-b1">
-                  建班、派課程、配置師生只需幾分鐘
-                </li>
-                <li data-i18n="roles-card1-b2">
-                  作業分數與弱點熱圖做為決策依據
-                </li>
-                <li data-i18n="roles-card1-b3">跨校/分部標準化教學品質</li>
-              </ul>
-            </article>
-            <article class="card compact">
-              <div class="card-icon">Teach</div>
-              <h3 data-i18n="roles-card2-title">老師</h3>
-              <ul class="bullet-list">
-                <li data-i18n="roles-card2-b1">上傳素材自動生成活動與作業</li>
-                <li data-i18n="roles-card2-b2">
-                  AI 建議題型符合課堂目標，可再微調
-                </li>
-                <li data-i18n="roles-card2-b3">
-                  一次派送基礎題，再針對學生程度加碼
-                </li>
-              </ul>
-            </article>
-            <article class="card compact">
-              <div class="card-icon">Student</div>
-              <h3 data-i18n="roles-card3-title">學生</h3>
-              <ul class="bullet-list">
-                <li data-i18n="roles-card3-b1">與課本對齊的每日/每週測驗</li>
-                <li data-i18n="roles-card3-b2">復習模式：重做錯題與舊作業</li>
-                <li data-i18n="roles-card3-b3">
-                  閃卡與口說練習，立即得分與建議
-                </li>
-              </ul>
-            </article>
-          </div>
-        </section> -->
-
-        <section class="section section--capsule fade" id="about">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="about-eyebrow">Team</p>
-            <h2 data-i18n="about-title">
-              We’re building the modern standard for English education.
-            </h2>
-            <p class="lede" data-i18n="about-body">
-              Language Boss 讓優秀學校持續交付優秀成果—可量化、可複製、可長久。
-            </p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3 data-i18n="beliefs-title">我們相信</h3>
-              <ul class="bullet-list">
-                <li data-i18n="belief-1">老師的時間應該用在教學，而不是行政</li>
-                <li data-i18n="belief-2">
-                  有結構且個人化的練習，能讓學生更快進步
-                </li>
-                <li data-i18n="belief-3">
-                  當品質一致且成果可見，學校才能持續成長
-                </li>
-              </ul>
-            </article>
-            <article class="card">
-              <div class="cta-actions">
-                <a
-                  class="btn primary large"
-                  href="mailto:contact@language-boss.com?subject=Meet%20the%20Language%20Boss%20team"
-                  data-i18n="about-cta-primary"
-                  >認識團隊</a
-                >
-                <a
-                  class="btn ghost large"
-                  href="#demo"
-                  data-i18n="about-cta-secondary"
-                  >與我們談談</a
-                >
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section--pulse fade" id="demo">
-          <div class="section-header">
-            <p class="eyebrow" data-i18n="contact-eyebrow">Demo</p>
-            <h2 data-i18n="contact-title">
-              想看看 Language Boss 如何套用到你的校園？
-            </h2>
-            <p class="lede" data-i18n="contact-body">
-              30 分鐘內，我們會依你的課程架構示範完整流程。
-            </p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3 data-i18n="contact-headlines-title">建議標題</h3>
-              <ul class="bullet-list">
-                <li data-i18n="contact-headline-1">
-                  See Language Boss in action
-                </li>
-                <li data-i18n="contact-headline-2">
-                  Build your school’s next system
-                </li>
-                <li data-i18n="contact-headline-3">
-                  Ready to modernize your English program?
-                </li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3 data-i18n="contact-form-title">Tell us</h3>
-              <ul class="bullet-list">
-                <li data-i18n="contact-q1">校區/班級數</li>
-                <li data-i18n="contact-q2">年齡與程度範圍</li>
-                <li data-i18n="contact-q3">
-                  最想改善：留存、成果、效率、差異化？
-                </li>
-              </ul>
-              <div class="cta-actions">
-                <a
-                  class="btn primary large"
-                  href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo"
-                  data-i18n="contact-cta"
-                  >Book my demo</a
-                >
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- <section class="cta fade">
+      <section class="cta" id="demo">
+        <div class="cta-card">
           <div>
-            <p class="eyebrow" data-i18n="cta-eyebrow">準備啟動</p>
-            <h2 data-i18n="cta-title">把 Language Boss 帶進你的校園</h2>
-            <p class="lede" data-i18n="cta-lede">
-              我們會把你的課程與教材建成 AI 模型，協助老師上手並在數週內推出 AI
-              作業。
-            </p>
+            <p class="eyebrow">Ready to see it?</p>
+            <h2>預約展示，最快一週上線</h2>
+            <p>帶著教材來，我們現場生成題目、建立班級，讓你看見完整流程。</p>
           </div>
-          <div class="cta-actions">
-            <a
-              class="btn primary large"
-              href="mailto:hello@language-boss.com?subject=Language%20Boss%20Demo"
-              data-i18n="cta-primary"
-              >預約展示</a
-            >
-            <a
-              class="btn ghost large"
-              href="mailto:hello@language-boss.com"
-              data-i18n="cta-secondary"
-              >與顧問聯繫</a
-            >
-          </div>
-        </section> -->
-      </main>
-    </div>
+          <a class="button primary" href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo">預約展示</a>
+        </div>
+      </section>
+    </main>
 
-    <script>
-      const translations = {
-        en: {
-          "brand-sub": "English learning OS built for Taiwanese schools",
-          "nav-problem": "Problem",
-          "nav-why": "Why Language Boss",
-          "nav-platform": "Product",
-          "nav-about": "About",
-          "nav-ai": "AI Flow",
-          "nav-demo": "Book a demo",
-          "hero-eyebrow": "Run your school on one system",
-          "hero-title":
-            "Not another app. A complete operating system for your English program.",
-          "hero-lede-1":
-            "Parents don’t want promises. They want progress they can see.",
-          "hero-lede-2":
-            "Stronger engagement + clear progress = higher retention and revenue.",
-          "hero-cta-primary": "Book a demo",
-          "hero-cta-secondary": "See the AI flow",
-          "bilingual-strip":
-            "Built by native English educators and operators who understand Taiwan—bilingual, local-first, outcomes-first. | 由母語英文、熟悉台灣教育現場的團隊打造：中英雙語溝通、以落地與成果為優先。",
-          "card-header": "Progress you can prove",
-          "stat-1-label": "Grammar accuracy lift",
-          "stat-1-value": "+12%",
-          "stat-1-sub": "in two weeks",
-          "stat-2-label": "Speaking confidence",
-          "stat-2-value": "2.3x",
-          "stat-2-sub": "after AI drills",
-          "stat-3-label": "Homework grading time",
-          "stat-3-value": "-65%",
-          "stat-3-sub": "auto-scoring with feedback",
-          "step-1-title": "Import textbooks or PDFs",
-          "step-1-desc":
-            "AI reads vocab, grammar, and themes to build a class knowledge graph.",
-          "step-2-title": "Generate practice and speech scripts",
-          "step-2-desc":
-            "Listening, speaking, reading, writing: dialogue, fill-ins, corrections, synonyms/antonyms, short writing.",
-          "step-3-title": "Teachers refine and launch",
-          "step-3-desc":
-            "Core homework plus personal boosters, with US/UK accent checks and voice models.",
-          "prob-eyebrow": "The problem",
-          "prob-title":
-            "Schools don’t need another app—they need a system that works.",
-          "prob-list-title": "The system must:",
-          "prob-1": "Make teaching smoother, not more complicated",
-          "prob-2": "Turn homework into insight, not busywork",
-          "prob-3": "Keep quality consistent across classes and campuses",
-          "prob-4": "Prove progress to parents and stakeholders",
-          "promise-eyebrow": "The promise",
-          "promise-title":
-            "Teach better. Operate smarter. Grow with confidence.",
-          "promise-body":
-            "Language Boss helps schools increase teaching effectiveness, strengthen retention, and improve unit economics—without burning out teachers.",
-          "benefit-eyebrow": "Key benefits",
-          "benefit-title": "Premium learning, at scale",
-          "benefit-sub":
-            "A unified standard, visible outcomes, and less admin so “Language Boss standard” becomes the quality parents recognize.",
-          "tile-1-title": "Premium learning, at scale",
-          "tile-1-body":
-            "Deliver a consistent, high-quality experience across every class and every teacher.",
-          "tile-2-title": "Real progress you can see",
-          "tile-2-body":
-            "Transform daily practice into clear, actionable performance signals.",
-          "tile-3-title": "Less admin, more teaching",
-          "tile-3-body":
-            "Automate the repetitive workflow so staff time goes where it matters.",
-          "tile-4-title": "A school-wide advantage",
-          "tile-4-body":
-            "Build a recognizable “Language Boss standard” parents notice and recommend.",
-          "social-proof":
-            "Used by forward-thinking schools that want results, not just features.",
-          "why-eyebrow": "Why Language Boss",
-          "why-title":
-            "Most tools are add-ons. Language Boss is infrastructure.",
-          "why-body":
-            "When learning, feedback, and reporting are split across tools, time is lost and momentum fades. Language Boss unifies classes, practice, scores, and insight in one system built for real classrooms.",
-          "diff-title": "Differentiators",
-          "diff-1": "Built for school operations — not consumer habits",
-          "diff-2": "Designed for premium delivery — not generic content",
-          "diff-3": "Aligned to teaching — not random “AI chat”",
-          "diff-4":
-            "Made for Taiwan schools — real workflows, real expectations",
-          "control-title": "AI that supports your teachers—not replaces them.",
-          "control-body":
-            "Teachers stay in charge of materials, assignments, and pacing. AI handles the heavy lifting to keep quality consistent.",
-          "control-strip": "See Language Boss live",
-          "os-eyebrow": "Operating system",
-          "os-title": "One console to run your English program",
-          "os-lede":
-            "From planning to feedback, Language Boss keeps leaders, teachers, and students aligned on the same data.",
-          "card-admin-title": "Admin control center",
-          "card-admin-body":
-            "Spin up classes across campuses, assign teachers and students, standardize materials and outcomes.",
-          "card-admin-b1": "Role-based access for admins, teachers, students",
-          "card-admin-b2": "Assignments, leaderboards, and tests centralized",
-          "card-admin-b3":
-            "Real-time scores and weakness trends per assignment",
-          "card-teacher-title": "Teacher AI copilot",
-          "card-teacher-body":
-            "Upload materials, let AI suggest exercise mixes, and keep final editorial control.",
-          "card-teacher-b1":
-            "Turn materials into activities and homework in one click",
-          "card-teacher-b2":
-            "US/UK accent detection with per-item speaking scores",
-          "card-teacher-b3":
-            "AI-proposed prompts; teachers can edit scripts anytime",
-          "card-student-title": "Student experience",
-          "card-student-body":
-            "Daily/weekly checks, revision mode, speakable flashcards, and anonymous shoutouts that motivate.",
-          "card-student-b1": "Type and speak answers with instant feedback",
-          "card-student-b2":
-            "Auto-detected gaps across grammar, vocab, listening, speaking",
-          "card-student-b3":
-            "Leaderboards and positive nudges to boost engagement",
-          "prod-eyebrow": "Product",
-          "prod-title": "The operating system for your English program",
-          "prod-body":
-            "Language Boss connects curriculum, practice, assessment, and reporting so teachers teach, students improve, and leaders see what works.",
-          "prod-1-title": "1) A unified learning workflow",
-          "prod-1-body":
-            "Lesson → practice → feedback without app-switching or chasing spreadsheets.",
-          "prod-2-title": "2) Personalized practice at classroom scale",
-          "prod-2-body":
-            "Maintain class rhythm while AI sets the right challenge and reinforcement per student.",
-          "prod-3-title": "3) Voice-first learning that feels natural",
-          "prod-3-body":
-            "Speaking practice has context, modeling, and US/UK checks—no awkward drills.",
-          "prod-4-title": "4) Clear reporting for teachers and leadership",
-          "prod-4-body":
-            "Track progress by class, level, and skill area; adjust strategy instantly.",
-          "ai-eyebrow": "AI ecosystem",
-          "ai-title": "Precision AI tuned for Taiwanese classrooms",
-          "ai-lede":
-            "Aligned to your textbooks, levels, and cultural context. AI does the heavy lifting while teachers keep quality.",
-          "ai-card1-title": "Adaptive practice",
-          "ai-card1-b1": "Spot grammar and vocab gaps from natural responses",
-          "ai-card1-b2":
-            "Switch output/input accents; include voice models and recognition",
-          "ai-card1-b3": "Auto-assign personal drills after core homework",
-          "ai-card1-b4":
-            "Scores, confidence, and teacher notes generated by AI",
-          "ai-card2-title": "Content intelligence",
-          "ai-card2-b1": "Parse books/PDFs into speaking and interactive tasks",
-          "ai-card2-b2":
-            "Formats: dialogue, fill-ins, corrections, synonym/antonym, short writing",
-          "ai-card2-b3": "Every item is teacher-editable and reviewable",
-          "ai-card2-b4": "Flashcards auto-generate with natural voice samples",
-          "panel-eyebrow": "Exercise design",
-          "panel-title": "Examples of assignments and drills",
-          "tag-1": "Use new words in real sentences",
-          "tag-2": "Dual track: spoken + written definitions",
-          "tag-3": "Listening and grammar fill-ins",
-          "tag-4": "Synonym / antonym transforms",
-          "tag-5": "Short writing with multiple target words",
-          "tag-6": "Fix incorrect sentences from AI prompts",
-          "tag-7": "Role-play dialogue scenarios",
-          "callout-title": "Shy students get noticed",
-          "callout-text":
-            "One student jumped from 70% to 98% in grammar; the whole class earned coffee—celebrated anonymously.",
-          "callout-note": "Positive stories fuel class momentum.",
-          "roles-eyebrow": "Role-based value",
-          "roles-title": "Every stakeholder sees results",
-          "roles-lede":
-            "Leaders track KPIs, teachers save prep time, students get personalized practice.",
-          "roles-card1-title": "School leaders",
-          "roles-card1-b1":
-            "Create classes, assign staff, and deploy curricula in minutes",
-          "roles-card1-b2": "Assignment scores and heatmaps inform decisions",
-          "roles-card1-b3": "Standardize teaching quality across campuses",
-          "roles-card2-title": "Teachers",
-          "roles-card2-b1":
-            "Upload materials; auto-build activities and homework",
-          "roles-card2-b2":
-            "AI suggests exercise types that match lesson goals",
-          "roles-card2-b3":
-            "Push core tasks once, then layer level-based extras",
-          "roles-card3-title": "Students",
-          "roles-card3-b1": "Daily/weekly assessments aligned to their book",
-          "roles-card3-b2": "Review mode to redo mistakes and past work",
-          "roles-card3-b3":
-            "Flashcards and speaking drills with instant scores",
-          "about-eyebrow": "About",
-          "about-title":
-            "We’re building the modern standard for English education.",
-          "about-body":
-            "Language Boss helps great schools deliver great outcomes—consistently, measurably, and sustainably.",
-          "beliefs-title": "We believe",
-          "belief-1": "Teachers should spend time teaching, not doing admin.",
-          "belief-2":
-            "Students improve faster when practice is structured and personalized.",
-          "belief-3":
-            "Schools grow when quality is consistent and progress is visible.",
-          "about-cta-primary": "Meet the team",
-          "about-cta-secondary": "Talk to us",
-          "contact-eyebrow": "Demo",
-          "contact-title": "Want to see Language Boss in your school?",
-          "contact-body":
-            "In 30 minutes we’ll map it to your program structure.",
-          "contact-headlines-title": "Headline options",
-          "contact-headline-1": "See Language Boss in action",
-          "contact-headline-2": "Build your school’s next system",
-          "contact-headline-3": "Ready to modernize your English program?",
-          "contact-form-title": "Tell us",
-          "contact-q1": "Number of campuses/classes",
-          "contact-q2": "Age range and levels",
-          "contact-q3":
-            "What you want to improve most (retention, outcomes, efficiency, differentiation)",
-          "contact-cta": "Book my demo",
-          "cta-eyebrow": "Ready to launch",
-          "cta-title": "Bring Language Boss to your campus",
-          "cta-lede":
-            "We model your curriculum in AI, onboard teachers, and roll out AI-powered homework in weeks.",
-          "cta-primary": "Book a demo",
-          "cta-secondary": "Talk to us",
-        },
-        zh: {
-          "brand-sub": "英語學習營運系統，專為台灣校園打造",
-          "nav-problem": "我們解決的問題",
-          "nav-why": "為什麼選擇",
-          "nav-platform": "產品",
-          "nav-about": "關於我們",
-          "nav-ai": "AI 流程",
-          "nav-demo": "預約展示",
-          "hero-eyebrow": "一個系統，駕馭整個英語課程",
-          "hero-title": "不是又一個 App，而是英語課程的完整營運系統。",
-          "hero-lede-1": "家長要的不是承諾，而是看得見的進步。",
-          "hero-lede-2": "高參與度 + 明確成效 = 更高留存與營收。",
-          "hero-cta-primary": "預約展示",
-          "hero-cta-secondary": "了解 AI 流程",
-          "bilingual-strip":
-            "由母語英文、熟悉台灣教育現場的團隊打造：中英雙語溝通、以落地與成果為優先。 | Built by native English educators and operators who understand Taiwan—bilingual, local-first, outcomes-first.",
-          "card-header": "進步看得見",
-          "stat-1-label": "文法準確率提升",
-          "stat-1-value": "+12%",
-          "stat-1-sub": "兩週內",
-          "stat-2-label": "口說自信度",
-          "stat-2-value": "2.3x",
-          "stat-2-sub": "AI 訓練後",
-          "stat-3-label": "作業批改時間",
-          "stat-3-value": "-65%",
-          "stat-3-sub": "自動評分＋回饋",
-          "step-1-title": "匯入教材或 PDF",
-          "step-1-desc": "AI 讀取詞彙、文法、主題重點，建立班級知識庫。",
-          "step-2-title": "生成練習與口說腳本",
-          "step-2-desc":
-            "聽說讀寫題型自動產生：情境對話、填空、改錯、同反義、短篇寫作。",
-          "step-3-title": "老師微調後一鍵派送",
-          "step-3-desc":
-            "基礎作業搭配個別加強題，支援美/英發音檢測與配音示範。",
-          "prob-eyebrow": "The problem",
-          "prob-title": "學校不需要「又一個 app」，而是能真正運作的系統",
-          "prob-list-title": "這個系統要能做到：",
-          "prob-1": "讓教學更順，不增加複雜度",
-          "prob-2": "把作業變成洞察，而非例行公事",
-          "prob-3": "跨班、跨校區品質一致",
-          "prob-4": "對家長與利害關係人證明進步",
-          "promise-eyebrow": "The promise",
-          "promise-title":
-            "Teach better. Operate smarter. Grow with confidence.",
-          "promise-body":
-            "Language Boss 協助學校提升教學成效、強化留存、打造更好的營運體質，同時保護老師的精力。",
-          "benefit-eyebrow": "關鍵優勢",
-          "benefit-title": "Premium learning, at scale",
-          "benefit-sub":
-            "統一標準、可見成果、減少行政負擔，讓「Language Boss 標準」成為家長信任的品質保證。",
-          "tile-1-title": "優質學習，全面覆蓋",
-          "tile-1-body": "跨班跨老師都能提供一致、高品質的學習體驗。",
-          "tile-2-title": "看得見的進步",
-          "tile-2-body": "把每日練習轉成清晰且可執行的表現訊號。",
-          "tile-3-title": "少行政，多教學",
-          "tile-3-body": "自動化重複流程，讓時間花在真正重要的地方。",
-          "tile-4-title": "全校的競爭優勢",
-          "tile-4-body": "建立「Language Boss 標準」，讓家長看得見、放心推薦。",
-          "social-proof": "與追求成果的前瞻學校合作，不只追求功能清單。",
-          "why-eyebrow": "Why Language Boss",
-          "why-title": "大多數工具只是附加，Language Boss 是基礎設施。",
-          "why-body":
-            "當學習、回饋與報表分散在不同工具，時間被浪費、動能被稀釋。Language Boss 把課堂、練習、成績與洞察收在同一套系統，為真實教室設計。",
-          "diff-title": "差異化亮點",
-          "diff-1": "為校務運作而生，不是一般消費者工具",
-          "diff-2": "為高品質教學打造，而非隨機內容聚合",
-          "diff-3": "緊貼教學流程，而非泛用的「AI 聊天」",
-          "diff-4": "為台灣學校調校，貼合在地流程與期待",
-          "control-title": "AI 支援老師，而非取代老師。",
-          "control-body":
-            "老師全程掌控教材、題目與派送節奏，AI 處理繁重分析與生成，確保品質一致。",
-          "control-strip": "立即體驗 Language Boss — 預約展示",
-          "os-eyebrow": "營運系統",
-          "os-title": "一個後台，讓英語課程高效運轉",
-          "os-lede":
-            "從課程規劃到作業回饋，Language Boss 讓管理者、老師、學生都在同一個數據真相上。",
-          "card-admin-title": "校方控制台",
-          "card-admin-body":
-            "跨校區快速建班、配置老師與學生、統一教材與成效追蹤。",
-          "card-admin-b1": "角色權限管理：校方、老師、學生分層控管",
-          "card-admin-b2": "作業、排行榜、測驗集中化",
-          "card-admin-b3": "每次作業的即時成績與弱點趨勢",
-          "card-teacher-title": "老師 AI 助教",
-          "card-teacher-body": "上傳素材、讓 AI 提議題型，再由老師決定與調整。",
-          "card-teacher-b1": "一鍵轉教材為活動與作業",
-          "card-teacher-b2": "美/英發音辨識，逐題口說評分",
-          "card-teacher-b3": "AI 建議題目，老師隨時編輯腳本",
-          "card-student-title": "學生學習體驗",
-          "card-student-body":
-            "每日/每週測驗、復習模式、可聽可說的閃卡，並透過匿名鼓勵提高投入。",
-          "card-student-b1": "口說與輸入並行，每題即時回饋",
-          "card-student-b2": "弱點自動檢測：文法、詞彙、聽說",
-          "card-student-b3": "排行榜與正向鼓勵，提升參與度",
-          "prod-eyebrow": "產品",
-          "prod-title": "你英語課程的營運系統",
-          "prod-body":
-            "Language Boss 連結課綱、練習、評量與報告，讓老師專心教，學生持續進步，主管即時看見成效。",
-          "prod-1-title": "1) 完整且連貫的學習流程",
-          "prod-1-body": "課堂 → 練習 → 回饋，一氣呵成，不必換工具或追資料。",
-          "prod-2-title": "2) 在班級規模下做到個人化",
-          "prod-2-body": "維持班級節奏，同時 AI 自動配置每位學生的適當挑戰。",
-          "prod-3-title": "3) 以口說為核心，流暢自然",
-          "prod-3-body": "情境對話、有示範、有檢測，美/英口音都能練得自然。",
-          "prod-4-title": "4) 教師與主管看得懂的報告",
-          "prod-4-body": "依班級、程度、技能追蹤進步，快速調整教學策略。",
-          "ai-eyebrow": "AI 生態",
-          "ai-title": "為台灣教室調校的精準 AI",
-          "ai-lede":
-            "貼合課本、程度、文化語境；AI 做繁重分析，老師掌控教學品質。",
-          "ai-card1-title": "自適應練習",
-          "ai-card1-b1": "自然回答中自動判斷文法/詞彙缺口",
-          "ai-card1-b2": "輸出輸入口音可切換；配音示範＋辨識",
-          "ai-card1-b3": "完成基礎作業後，自動排個人化加強題",
-          "ai-card1-b4": "AI 產出分數、信心度與教師建議",
-          "ai-card2-title": "內容智慧",
-          "ai-card2-b1": "解析書本/PDF 生成口說與互動題",
-          "ai-card2-b2": "題型：情境對話、填空、改錯、同反義、短文",
-          "ai-card2-b3": "每一題都可由老師編輯與覆核",
-          "ai-card2-b4": "閃卡自動產生真人風格語音示例",
-          "panel-eyebrow": "練習設計",
-          "panel-title": "作業與訓練的範例",
-          "tag-1": "把新字放進真實句子",
-          "tag-2": "口說定義＋文字定義雙軌",
-          "tag-3": "聽力填空與文法填空",
-          "tag-4": "同義 / 反義轉換",
-          "tag-5": "短篇寫作涵蓋多個新字",
-          "tag-6": "修正 AI 提供的錯誤句子",
-          "tag-7": "情境對話角色扮演",
-          "callout-title": "害羞學生也能被看見",
-          "callout-text":
-            "一位學生的文法分數從 70% 漲到 98%，全班獲得咖啡獎勵—成就被看見，但姓名保持匿名。",
-          "callout-note": "用正向故事推動班級動力。",
-          "roles-eyebrow": "角色價值",
-          "roles-title": "讓每個利害關係人都看得到成果",
-          "roles-lede": "校方掌握 KPI，老師節省備課時間，學生得到專屬練習。",
-          "roles-card1-title": "校方與主管",
-          "roles-card1-b1": "建班、派課程、配置師生只需幾分鐘",
-          "roles-card1-b2": "作業分數與弱點熱圖做為決策依據",
-          "roles-card1-b3": "跨校/分部標準化教學品質",
-          "roles-card2-title": "老師",
-          "roles-card2-b1": "上傳素材自動生成活動與作業",
-          "roles-card2-b2": "AI 建議題型符合課堂目標，可再微調",
-          "roles-card2-b3": "一次派送基礎題，再針對學生程度加碼",
-          "roles-card3-title": "學生",
-          "roles-card3-b1": "與課本對齊的每日/每週測驗",
-          "roles-card3-b2": "復習模式：重做錯題與舊作業",
-          "roles-card3-b3": "閃卡與口說練習，立即得分與建議",
-          "about-eyebrow": "About",
-          "about-title":
-            "We’re building the modern standard for English education.",
-          "about-body":
-            "Language Boss 讓優秀學校持續交付優秀成果—可量化、可複製、可長久。",
-          "beliefs-title": "我們相信",
-          "belief-1": "老師的時間應該用在教學，而不是行政",
-          "belief-2": "有結構且個人化的練習，能讓學生更快進步",
-          "belief-3": "當品質一致且成果可見，學校才能持續成長",
-          "about-cta-primary": "認識團隊",
-          "about-cta-secondary": "與我們談談",
-          "contact-eyebrow": "Demo",
-          "contact-title": "想看看 Language Boss 如何套用到你的校園？",
-          "contact-body": "30 分鐘內，我們會依你的課程架構示範完整流程。",
-          "contact-headlines-title": "建議標題",
-          "contact-headline-1": "看看 Language Boss 的實際運作",
-          "contact-headline-2": "打造你學校的下一套系統",
-          "contact-headline-3": "準備讓英語課全面現代化？",
-          "contact-form-title": "請分享",
-          "contact-q1": "校區/班級數",
-          "contact-q2": "年齡與程度範圍",
-          "contact-q3": "最想改善：留存、成果、效率、差異化？",
-          "contact-cta": "預約 Demo",
-          "cta-eyebrow": "準備啟動",
-          "cta-title": "把 Language Boss 帶進你的校園",
-          "cta-lede":
-            "我們會把你的課程與教材建成 AI 模型，協助老師上手並在數週內推出 AI 作業。",
-          "cta-primary": "預約展示",
-          "cta-secondary": "與顧問聯繫",
-        },
-      };
-
-      document.body.classList.remove("no-js");
-
-      const langButtons = document.querySelectorAll(".lang-btn");
-      const elements = document.querySelectorAll("[data-i18n]");
-      const savedLang = localStorage.getItem("lb-lang");
-      const currentLang = savedLang || "zh";
-
-      function applyLanguage(lang) {
-        document.documentElement.setAttribute(
-          "lang",
-          lang === "zh" ? "zh-Hant" : "en"
-        );
-        langButtons.forEach((btn) =>
-          btn.classList.toggle("active", btn.dataset.lang === lang)
-        );
-        elements.forEach((el) => {
-          const key = el.dataset.i18n;
-          const copy = translations[lang][key];
-          if (copy) {
-            el.textContent = copy;
-          }
-        });
-        localStorage.setItem("lb-lang", lang);
-      }
-
-      langButtons.forEach((btn) =>
-        btn.addEventListener("click", () => applyLanguage(btn.dataset.lang))
-      );
-
-      applyLanguage(currentLang);
-
-      const fadeEls = document.querySelectorAll(".fade, .card, .panel, .cta");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 }
-      );
-      fadeEls.forEach((el) => observer.observe(el));
-    </script>
+    <footer class="footer">
+      <p>© Language Boss. Built for Taiwan schools.</p>
+      <div class="footer-links">
+        <a href="mailto:contact@language-boss.com?subject=Language%20Boss%20Demo">contact@language-boss.com</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
   </body>
 </html>
