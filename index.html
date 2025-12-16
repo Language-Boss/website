@@ -1047,7 +1047,10 @@
 
       applyLanguage(currentLang);
 
-      const statValues = document.querySelectorAll(".stat-value");
+
+      const statValues = Array.from(document.querySelectorAll(".stat-value"));
+      let statsPrepared = false;
+      let statsAnimated = false;
 
       function parseStatValue(value) {
         const match = value.trim().match(/^([+−-])?\s*([0-9]*\.?[0-9]+)(.*)$/);
@@ -1073,6 +1076,17 @@
         return `${prefix}${display}${suffix}`;
       }
 
+      function prepareStatTargets() {
+        statValues.forEach((el) => {
+          const parsed = parseStatValue(el.textContent);
+          if (!parsed) return;
+
+          el.dataset.statTarget = el.textContent.trim();
+          el.textContent = formatStatValue(0, parsed);
+        });
+        statsPrepared = true;
+      }
+
       function animateStat(el) {
         const targetString = el.dataset.statTarget || el.textContent;
         const parsed = parseStatValue(targetString);
@@ -1093,28 +1107,35 @@
         requestAnimationFrame(step);
       }
 
-      statValues.forEach((el) => {
-        const parsed = parseStatValue(el.textContent);
-        if (!parsed) return;
+      function startStatAnimation() {
+        if (statsAnimated) return;
+        if (!statsPrepared) prepareStatTargets();
+        statsAnimated = true;
+        statValues.forEach(animateStat);
+      }
 
-        el.dataset.statTarget = el.textContent.trim();
-        el.textContent = formatStatValue(0, parsed);
-      });
+      prepareStatTargets();
 
-      const hero = document.querySelector(".hero");
-      const statObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              statValues.forEach(animateStat);
-              statObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.35 }
-      );
+      const heroTrigger =
+        document.querySelector(".hero-card") || document.querySelector(".hero");
 
-      if (hero) statObserver.observe(hero);
+      if ("IntersectionObserver" in window && heroTrigger) {
+        const statObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startStatAnimation();
+                statObserver.disconnect();
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+
+        statObserver.observe(heroTrigger);
+      } else {
+        startStatAnimation();
+      }
 
       const fadeEls = document.querySelectorAll(".fade, .card, .panel, .cta");
       const observer = new IntersectionObserver(
